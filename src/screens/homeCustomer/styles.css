@@ -1,0 +1,133 @@
+* {
+   background-color: #d2f1fb;
+}
+
+.container {
+   padding: 2cm 2cm;
+}
+
+.container .boxcontainer {
+   display: flex;
+   flex-direction: column;
+}
+
+.hehelol {
+   align-self: center;
+   background-color: white;
+   font-size: 20px;
+   padding: 5mm 3cm;
+   border-radius: 10px;
+   margin: 10px;
+   align-items: center;
+   width: 25cm;
+   /* background-color: red; */
+
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.space {
+   height: 3mm;
+}
+
+.item-open {
+   background-color: white;
+   font-size: 15px;
+   padding: 5mm 3cm;
+   border-radius: 10px;
+   margin: 10px;
+}
+
+.box {
+   background-color: transparent;
+}
+
+.box .contain {
+   background-color: #d2f1fb;
+   width: 100%;
+}
+
+.filter {
+   align-self: center;
+}
+
+.filter .form {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.check {
+   padding: 0px 10px;
+}
+
+.btn {
+   padding-left: -4cm;
+}
+
+.bob {
+   align-self: center;
+   border: none;
+   letter-spacing: 1px;
+   background: radial-gradient(
+      ellipse at left bottom,
+      rgb(183, 186, 189) 0%,
+      rgba(157, 161, 163, 0.9) 59%,
+      rgba(206, 209, 209, 0.9) 100%
+   );
+   width: 5cm;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   border-radius: 5px;
+   color: white;
+}
+.bob:hover {
+   background-color: #009ece;
+}
+
+.slotContainer {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.slot {
+   align-self: center;
+   background-color: blue;
+   font-size: 20px;
+   padding: 5mm 3cm;
+   border-radius: 10px;
+   margin: 10px;
+   align-items: center;
+}
+
+.lol {
+   margin-top: 1cm;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   background-color: transparent;
+}
+
+.bob button {
+   align-self: center;
+   border: none;
+   letter-spacing: 1px;
+   background: radial-gradient(
+      ellipse at left bottom,
+      rgb(183, 186, 189) 0%,
+      rgba(157, 161, 163, 0.9) 59%,
+      rgba(206, 209, 209, 0.9) 100%
+   );
+   width: 5cm;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   border-radius: 5px;
+   color: white;
+}

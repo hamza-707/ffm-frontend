@@ -1,0 +1,36 @@
+* {
+    background-color: #d2f1fb;
+}
+
+.container {
+    padding: 1cm 4cm;
+}
+
+.item {
+    display: block;
+    align-self: center;
+    background-color: white;
+    font-size: 20px;
+    padding: 5mm 3cm;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+h1 {
+    display: block;
+    align-self: center;
+    padding-bottom: 1cm;
+    padding-left: 1cm;
+    width: 100%;
+}
+
+.zahn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+}
+.item div {
+    background-color: transparent;
+}

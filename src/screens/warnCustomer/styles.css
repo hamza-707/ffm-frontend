@@ -1,0 +1,64 @@
+* {
+   background-color: #d2f1fb;
+}
+
+.container {
+   padding: 1cm 4cm;
+}
+
+.item {
+   display: block;
+   align-self: center;
+   background-color: white;
+   font-size: 20px;
+   padding: 5mm 3cm;
+   border-radius: 10px;
+   margin: 10px;
+   width: 80%;
+}
+
+h1 {
+   display: block;
+   align-self: center;
+   padding-bottom: 1cm;
+   padding-left: 1cm;
+   width: 100%;
+}
+
+.zahn {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   background-color: transparent;
+}
+.item div {
+   background-color: transparent;
+}
+
+.hehecontainer {
+   display: flex;
+   flex-direction: row;
+}
+
+.item2 {
+   justify-content: center;
+   align-self: center;
+}
+
+.delete {
+   justify-content: center;
+   align-self: center;
+   width: 4cm;
+   height: 1.5cm;
+   align-items: center;
+   align-content: center;
+   left: 14cm;
+   margin-bottom: 4cm;
+   border-radius: 0;
+   margin-left: 10mm;
+   margin-right: 10mm;
+}
+
+.yay {
+   background-color: transparent;
+}
