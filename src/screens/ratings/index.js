@@ -12,8 +12,13 @@ const Ratings = (props) => {
       const obj = {
          customerID: props.customerID,
       };
-      axios
-         .post('https://dbproject-group21.000webhostapp.com/db_proj/CRateableBookings.php', obj)
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
+      await axios
+         .post('https://dbproject-group21.000webhostapp.com/db_proj/CRateableBookings.php', obj, config)
          .then((res) => {
             setItems(res.data);
          });
@@ -57,7 +62,12 @@ const Ratings = (props) => {
                   bookingID: items[i].id,
                   rating: ratings
                }
-               await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/giveRatings.php', obj)
+               const config = {
+                  headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                  }
+              };
+               await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/giveRatings.php', obj, config)
                setRateRun({value: true});   
             }
          }

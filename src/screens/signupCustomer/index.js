@@ -19,7 +19,12 @@ const SignupCustomer = (props) => {
       password1: password1,
       password2: password2
     };
-    await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/registerCustomer.php', obj)
+    const config = {
+      headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+      }
+  };
+    await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/registerCustomer.php', obj, config)
       .then(res => {msg = res.data})
       .catch(error => {console.log(error)});
     if(msg == "Success"){

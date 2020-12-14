@@ -9,7 +9,12 @@ const OwnerActive = (props) => {
       const obj = {
          fieldID: props.fieldID
       };
-      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/OActiveBookings.php', obj).then((res) => {
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
+      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/OActiveBookings.php', obj, config).then((res) => {
          setItems(res.data);
       });
    }, []);

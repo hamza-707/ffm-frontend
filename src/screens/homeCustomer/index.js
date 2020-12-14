@@ -14,7 +14,12 @@ const HomeCustomer = (props) => {
    const [ID, setID] = React.useState('');
    const [timing, setTiming] = React.useState('');
    React.useEffect(async () => {
-      await axios.get('https://dbproject-group21.000webhostapp.com/db_proj/loadFieldsData.php').then((res) => {
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
+      await axios.get('https://dbproject-group21.000webhostapp.com/db_proj/loadFieldsData.php', config).then((res) => {
          setItems(res.data);
       });
    }, []);
@@ -28,8 +33,13 @@ const HomeCustomer = (props) => {
          let id = '';
          let slotTime = '';
          let numSlot = '';
+         const config = {
+            headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        };
          await axios
-            .post('https://dbproject-group21.000webhostapp.com/db_proj/loadTiming.php', obj)
+            .post('https://dbproject-group21.000webhostapp.com/db_proj/loadTiming.php', obj, config)
             .then((res) => {
                for (let i = 0; i < res.data.length; i++) {
                   id = res.data[i][0];
@@ -53,8 +63,13 @@ const HomeCustomer = (props) => {
             timing: timing,
             date: date,
          };
+         const config = {
+            headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        };
          await axios
-            .post('https://dbproject-group21.000webhostapp.com/db_proj/makeBooking.php', obj)
+            .post('https://dbproject-group21.000webhostapp.com/db_proj/makeBooking.php', obj, config)
             .then((res) => {
                let msg = res.data;
                if (msg == 'Made') {

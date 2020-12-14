@@ -10,7 +10,12 @@ const ActiveBooking = (props) => {
       const obj = {
          customerID: props.customerID
       };
-      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/CActiveBookings.php', obj).then((res) => {
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
+      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/CActiveBookings.php', obj, config).then((res) => {
          setItems(res.data);
       });
    }, []);

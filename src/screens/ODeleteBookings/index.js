@@ -11,7 +11,12 @@ const ODeleteBooking = (props) => {
       const obj = {
          fieldID: props.fieldID
       };
-      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/OActiveBookings.php', obj).then((res) => {
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
+      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/OActiveBookings.php', obj, config).then((res) => {
          setItems(res.data);
       });
    }, [delRun]);
@@ -41,7 +46,12 @@ const ODeleteBooking = (props) => {
             const obj = {
                bookingID: items[i].id
             };
-            await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/ODeleteBookings.php', obj);
+            const config = {
+               headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+               }
+           };
+            await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/ODeleteBookings.php', obj, config);
          }
       }
       setDelRun({value: true});

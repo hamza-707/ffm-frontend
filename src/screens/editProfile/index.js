@@ -13,7 +13,6 @@ const EditProfile = (props) => {
 
    
    const handleClick = async () => {
-      console.log(fieldCount);
       const obj = {
          id: props.fieldID,
          name: name,
@@ -21,9 +20,13 @@ const EditProfile = (props) => {
          num: fieldCount,
          rate: rate
       };
-      console.log(obj);
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
       let msg = "";
-      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/editProfile.php', obj)
+      await axios.post('https://dbproject-group21.000webhostapp.com/db_proj/editProfile.php', obj, config)
          .then(res => {
             msg = res.data;
             if(msg == "No"){

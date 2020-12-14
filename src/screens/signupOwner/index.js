@@ -23,8 +23,13 @@ const SignupOwner = (props) => {
          rate: rate,
          num: num,
       };
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
       await axios
-         .post('https://dbproject-group21.000webhostapp.com/db_proj/registerField.php', obj)
+         .post('https://dbproject-group21.000webhostapp.com/db_proj/registerField.php', obj, config)
          .then((res) => {
             msg = res.data;
          })

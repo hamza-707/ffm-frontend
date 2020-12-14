@@ -9,12 +9,17 @@ const Login = (props) => {
    let msg = '';
    let ID = '';
    async function handleLogin() {
-      const obj = {
+      const  obj = {
          email: email,
          password: password,
       };
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
       await axios
-         .post('https://dbproject-group21.000webhostapp.com/db_proj/signin.php', obj, )
+         .post('https://dbproject-group21.000webhostapp.com/db_proj/signin.php', obj, config)
          .then((res) => {
             msg = res.data[1];
             ID = res.data[0];

@@ -12,8 +12,13 @@ const Warn = (props) => {
       const obj = {
          fieldID: props.fieldID,
       };
+      const config = {
+         headers: {
+         'Content-Type': 'application/x-www-form-urlencoded'
+         }
+     };
       await axios
-         .post('https://dbproject-group21.000webhostapp.com/db_proj/OPastBookings.php', obj)
+         .post('https://dbproject-group21.000webhostapp.com/db_proj/OPastBookings.php', obj, config)
          .then((res) => {
             setItems(res.data);
          });
@@ -47,8 +52,13 @@ const Warn = (props) => {
             const obj = {
                bookingID: items[i].id,
             };
+            const config = {
+               headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+               }
+           };
             await axios
-               .post('https://dbproject-group21.000webhostapp.com/db_proj/OWarn.php', obj);
+               .post('https://dbproject-group21.000webhostapp.com/db_proj/OWarn.php', obj, config);
             count++;
             if (count === 1) {
                alert('Customer(s) Warned');
@@ -64,8 +74,13 @@ const Warn = (props) => {
             const obj = {
                bookingID: items[i].id,
             };
+            const config = {
+               headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+               }
+           };
             await axios
-               .post('https://dbproject-group21.000webhostapp.com/db_proj/OAvailed.php', obj);
+               .post('https://dbproject-group21.000webhostapp.com/db_proj/OAvailed.php', obj, config);
             count++;
             if (count === 1) {
                alert('Bookings(s) Removed');
